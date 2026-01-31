@@ -167,7 +167,7 @@
         .beyond {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1.2rem;
+            gap: 1.5rem;
         }
 
         .beyond-item {
@@ -177,7 +177,7 @@
         .beyond-item h3 {
             font-size: 0.95rem;
             font-weight: 600;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.5rem;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
 
@@ -185,6 +185,28 @@
             font-size: 0.88rem;
             color: #555;
             line-height: 1.6;
+        }
+
+        .beyond-item .beyond-img {
+            width: 100%;
+            border-radius: 6px;
+            margin-bottom: 0.7rem;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+        }
+
+        .travel-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 0.5rem;
+            margin-bottom: 0.7rem;
+        }
+
+        .travel-gallery img {
+            width: 100%;
+            border-radius: 6px;
+            aspect-ratio: 1/1;
+            object-fit: cover;
         }
 
         /* --- Connect --- */
@@ -328,6 +350,11 @@
                 </div>
                 <div class="beyond-item">
                     <h3>🌍 Travel</h3>
+                    <div class="travel-gallery">
+                        <img src="iceland.jpg" alt="Road trip in Iceland">
+                        <img src="persepolis.jpg" alt="Persepolis, Iran">
+                        <img src="rwanda.jpg" alt="Mountain gorilla in Rwanda">
+                    </div>
                     <p>I'm happiest when I'm somewhere unfamiliar. Highlights include a road trip around Iceland, tracking mountain gorillas in the wild in Rwanda, and wandering through ancient Persepolis on a trip across Iran.</p>
                 </div>
                 <div class="beyond-item">
@@ -336,6 +363,7 @@
                 </div>
                 <div class="beyond-item">
                     <h3>🍷 Food & Wine</h3>
+                    <img src="fernblick.jpg" alt="Gerald and Stefan" class="beyond-img">
                     <p>Enthusiastic home cook, orange wine evangelist, and firm believer that a good meal is the best way to end any day — or start a conversation.</p>
                 </div>
             </div>
