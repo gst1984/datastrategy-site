@@ -1,0 +1,31 @@
+---
+layout: default
+title: Blog
+---
+<header>
+    <div class="header-top">
+        <a href="/"><img src="/gerald.jpg" alt="Gerald Stockinger" class="header-photo"></a>
+        <div>
+            <h1>Blog</h1>
+            <div class="location">Thoughts on technology, culture, and data</div>
+        </div>
+    </div>
+</header>
+
+{% if site.posts.size > 0 %}
+<ul class="blog-list">
+    {% for post in site.posts %}
+    <li>
+        <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">
+            {{ post.date | date: "%B %d, %Y" }}
+        </time>
+        <a href="{{ post.url }}" class="post-link">{{ post.title }}</a>
+        {% if post.excerpt %}
+        <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p style="color: var(--muted); font-style: italic;">Coming soon — stay tuned.</p>
+{% endif %}
