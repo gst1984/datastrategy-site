@@ -4,7 +4,7 @@ title: Blog
 ---
 <header>
     <div class="header-top">
-        <a href="/"><img src="/gerald.jpg" alt="Gerald Stockinger" class="header-photo"></a>
+        <a href="{{ '/' | relative_url }}"><img src="{{ '/gerald.jpg' | relative_url }}" alt="Gerald Stockinger" class="header-photo"></a>
         <div>
             <h1>Blog</h1>
             <div class="location">Thoughts on technology, culture, and data</div>
@@ -19,7 +19,7 @@ title: Blog
         <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">
             {{ post.date | date: "%B %d, %Y" }}
         </time>
-        <a href="{{ post.url }}" class="post-link">{{ post.title }}</a>
+        <a href="{{ post.url | relative_url }}" class="post-link">{{ post.title }}</a>
         {% if post.excerpt %}
         <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
         {% endif %}

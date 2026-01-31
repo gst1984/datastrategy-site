@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title | default: site.title }} — Gerald Stockinger</title>
     <meta name="description" content="{{ page.description | default: site.description }}">
-    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
 </head>
 <body>
     <div class="wrapper">
         {{ content }}
 
         <footer>
-            <a href="/">Home</a> · <a href="/blog/">Blog</a>
+            <a href="{{ '/' | relative_url }}">Home</a> · <a href="{{ '/blog/' | relative_url }}">Blog</a>
             <span style="float:right">&copy; 2026 Gerald Stockinger</span>
         </footer>
     </div>
