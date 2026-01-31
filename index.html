@@ -129,6 +129,18 @@
             color: var(--text);
         }
 
+        .story strong a {
+            color: var(--text);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .story strong a:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
         /* --- Clients --- */
         .clients {
             font-size: 0.92rem;
@@ -271,8 +283,8 @@
             <h2>How I Got Here</h2>
             <div class="story">
                 <p>I moved from Salzburg to Vienna in 2003 to study software engineering at <strong>TU Wien</strong>, and somehow never left. My first real job threw me into business intelligence consulting at <strong>Harrer & Partner</strong> — crunching data for universities, car companies, anyone who'd have me. But it was a project in the cultural sector that changed everything. Turns out, helping a theater understand its audience was more interesting to me than optimizing supply chains.</p>
-                <p>That thread kept pulling. I went self-employed in 2013, dove deeper into analytics for arts organizations through <strong>Kulturplanner</strong> — eventually becoming CTO before moving to the advisory board. In 2014, I co-founded what would become <strong>easy-connect</strong> — a mobile platform for arts and culture organizations that somehow kept growing.</p>
-                <p>Along the way, I spent a few years as CTO at <strong>IDAGIO</strong>, the classical music streaming platform.</p>
+                <p>That thread kept pulling. I went self-employed in 2013, dove deeper into analytics for arts organizations through <strong><a href="https://kulturplanner.com" target="_blank" rel="noopener">Kulturplanner</a></strong> — eventually becoming CTO before moving to the advisory board. In 2014, I co-founded what would become <strong><a href="https://easy-connect.io" target="_blank" rel="noopener">easy-connect</a></strong> — a mobile platform for arts and culture organizations that somehow kept growing.</p>
+                <p>Along the way, I spent a few years as CTO at <strong><a href="https://idagio.com" target="_blank" rel="noopener">IDAGIO</a></strong>, the classical music streaming platform.</p>
                 <p>The common thread? I keep ending up at the intersection of technology and culture. It wasn't planned — it just turned out to be where I'm most useful and most happy.</p>
             </div>
         </section>
