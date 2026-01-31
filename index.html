@@ -75,6 +75,18 @@
             font-weight: 600;
         }
 
+        header .intro strong a {
+            color: var(--text);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        header .intro strong a:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
         /* --- Sections --- */
         section {
             margin-bottom: 3.5rem;
@@ -253,7 +265,7 @@
                 </div>
             </div>
             <div class="intro">
-                I build technology for the arts. As <strong>CTO and co-founder of easy-connect</strong>, I lead the development of mobile platforms that connect cultural institutions with their audiences — from the <strong>Metropolitan Opera</strong> in New York to the <strong>Salzburg Festival</strong>.
+                I build technology for the arts. As <strong>CTO and co-founder of <a href="https://easy-connect.io" target="_blank" rel="noopener">easy-connect</a></strong>, I lead the development of mobile platforms that connect cultural institutions with their audiences — from the <strong>Metropolitan Opera</strong> in New York to the <strong>Salzburg Festival</strong>.
             </div>
         </header>
 
