@@ -117,39 +117,16 @@
             line-height: 1.5;
         }
 
-        /* --- Journey --- */
-        .journey-item {
-            display: flex;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
+        /* --- Story --- */
+        .story p {
+            font-size: 0.98rem;
+            color: #444;
+            margin-bottom: 1.2rem;
         }
 
-        .journey-year {
-            flex-shrink: 0;
-            width: 90px;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            font-size: 0.8rem;
+        .story strong {
             font-weight: 600;
-            color: var(--muted);
-            padding-top: 0.2rem;
-        }
-
-        .journey-content h3 {
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 0.2rem;
-        }
-
-        .journey-content .role {
-            font-size: 0.88rem;
-            color: var(--accent);
-            font-style: italic;
-            margin-bottom: 0.3rem;
-        }
-
-        .journey-content p {
-            font-size: 0.92rem;
-            color: #555;
+            color: var(--text);
         }
 
         /* --- Clients --- */
@@ -249,8 +226,6 @@
             header h1 { font-size: 1.5rem; }
             .focus-grid { grid-template-columns: 1fr; }
             .beyond { grid-template-columns: 1fr; }
-            .journey-item { flex-direction: column; gap: 0.3rem; }
-            .journey-year { width: auto; }
             .connect-links { flex-wrap: wrap; gap: 1rem 1.5rem; }
         }
     </style>
@@ -293,46 +268,12 @@
         </section>
 
         <section>
-            <h2>The Journey</h2>
-            <div class="journey-item">
-                <div class="journey-year">2014 –</div>
-                <div class="journey-content">
-                    <h3>easy-connect</h3>
-                    <div class="role">Co-Founder & CTO</div>
-                    <p>Started as Ticket Gretchen — a culture ticketing app for Vienna — and grew into a SaaS platform powering mobile experiences for opera houses, theaters, and concert halls across Europe and the US. Today we serve 100+ clients with a team building on Java, Angular, Python, and AWS.</p>
-                </div>
-            </div>
-            <div class="journey-item">
-                <div class="journey-year">2021 – 25</div>
-                <div class="journey-content">
-                    <h3>IDAGIO</h3>
-                    <div class="role">CTO, then Advisory Board</div>
-                    <p>Led the technology team at the classical music streaming platform. Transitioned to an advisory role in 2023.</p>
-                </div>
-            </div>
-            <div class="journey-item">
-                <div class="journey-year">2007 – 23</div>
-                <div class="journey-content">
-                    <h3>Kulturplanner</h3>
-                    <div class="role">BI Consultant → CTO → Advisory Board</div>
-                    <p>Started as a business intelligence consultant at Harrer & Partner, working on analytics projects across industries — universities, automotive, and increasingly the cultural sector. Became self-employed in 2013, took over as CTO in 2019, and moved to the advisory board in 2023. Kulturplanner is now a dedicated reporting and data analytics platform for cultural venues.</p>
-                </div>
-            </div>
-            <div class="journey-item">
-                <div class="journey-year">2022 –</div>
-                <div class="journey-content">
-                    <h3>Data Strategy Services</h3>
-                    <div class="role">Founder</div>
-                    <p>Independent consulting focused on data strategy, analytics, and business intelligence — primarily for arts and cultural organizations.</p>
-                </div>
-            </div>
-            <div class="journey-item">
-                <div class="journey-year">2003 – 07</div>
-                <div class="journey-content">
-                    <h3>TU Wien</h3>
-                    <div class="role">Software Engineering</div>
-                    <p>Moved to Vienna to study software engineering, building the foundation for everything that followed.</p>
-                </div>
+            <h2>How I Got Here</h2>
+            <div class="story">
+                <p>I moved from Salzburg to Vienna in 2003 to study software engineering at <strong>TU Wien</strong>, and somehow never left. My first real job threw me into business intelligence consulting at <strong>Harrer & Partner</strong> — crunching data for universities, car companies, anyone who'd have me. But it was a project in the cultural sector that changed everything. Turns out, helping a theater understand its audience was more interesting to me than optimizing supply chains.</p>
+                <p>That thread kept pulling. I went self-employed in 2013, dove deeper into analytics for arts organizations through <strong>Kulturplanner</strong> — eventually becoming CTO before moving to the advisory board. In 2014, I co-founded what would become <strong>easy-connect</strong> — first as a small ticketing app for Vienna, now a SaaS platform serving 100+ cultural institutions from New York to Zürich.</p>
+                <p>Along the way, I spent a few years as CTO at <strong>IDAGIO</strong>, the classical music streaming platform, and started <strong>Data Strategy Services</strong> for independent consulting work.</p>
+                <p>The common thread? I keep ending up at the intersection of technology and culture. It wasn't planned — it just turned out to be where I'm most useful and most happy.</p>
             </div>
         </section>
 
