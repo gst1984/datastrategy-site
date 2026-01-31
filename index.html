@@ -163,22 +163,28 @@
             white-space: nowrap;
         }
 
-        /* --- Excited About --- */
-        .interests {
-            font-size: 0.95rem;
-            color: #444;
+        /* --- Beyond Work --- */
+        .beyond {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
         }
 
-        .interests span {
-            display: inline-block;
-            background: var(--accent-light);
-            color: var(--accent);
+        .beyond-item {
+            padding: 0.2rem 0;
+        }
+
+        .beyond-item h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            font-size: 0.82rem;
-            font-weight: 500;
-            padding: 0.3rem 0.7rem;
-            border-radius: 20px;
-            margin: 0.2rem 0.3rem 0.2rem 0;
+        }
+
+        .beyond-item p {
+            font-size: 0.88rem;
+            color: #555;
+            line-height: 1.6;
         }
 
         /* --- Connect --- */
@@ -314,17 +320,24 @@
         </section>
 
         <section>
-            <h2>Excited About</h2>
-            <div class="interests">
-                <span>AI & LLMs</span>
-                <span>Data Engineering</span>
-                <span>Digital Transformation in Culture</span>
-                <span>Audience Development</span>
-                <span>Product-Led Growth</span>
-                <span>Open Data</span>
-                <span>Board Games</span>
-                <span>Fine Dining</span>
-                <span>Orange Wine</span>
+            <h2>Beyond Work</h2>
+            <div class="beyond">
+                <div class="beyond-item">
+                    <h3>🎲 Board Games</h3>
+                    <p>I love anything strategic — from engine builders to heavy euros. Stefan and I once made it to runner-up at the Pandemic World Championship, which remains one of our proudest and nerdiest moments.</p>
+                </div>
+                <div class="beyond-item">
+                    <h3>🌍 Travel</h3>
+                    <p>I'm happiest when I'm somewhere unfamiliar. Highlights include a road trip around Iceland, tracking mountain gorillas in the wild in Rwanda, and wandering through ancient Persepolis on a trip across Iran.</p>
+                </div>
+                <div class="beyond-item">
+                    <h3>⛷️ Mountains</h3>
+                    <p>I grew up in Salzburg, so skiing and mountains are basically in my DNA. Vienna is wonderful — but I still need my alpine fix.</p>
+                </div>
+                <div class="beyond-item">
+                    <h3>🍷 Food & Wine</h3>
+                    <p>Enthusiastic home cook, orange wine evangelist, and firm believer that a good meal is the best way to end any day — or start a conversation.</p>
+                </div>
             </div>
         </section>
 
