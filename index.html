@@ -3,69 +3,325 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Strategy Services — Gerald Stockinger</title>
+    <title>Gerald Stockinger — Technology, Data & Product</title>
+    <meta name="description" content="Gerald Stockinger — CTO, co-founder, and product builder based in Vienna. Helping arts & culture organizations thrive through technology.">
     <style>
+        :root {
+            --bg: #fafaf9;
+            --text: #1a1a1a;
+            --muted: #6b6b6b;
+            --accent: #2d5a27;
+            --accent-light: #e8f0e6;
+            --border: #e5e5e3;
+            --card-bg: #ffffff;
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #0a0a0a;
-            color: #e0e0e0;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 17px;
         }
-        .container {
-            text-align: center;
-            padding: 2rem;
-            max-width: 600px;
+
+        .wrapper {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem 6rem;
         }
-        h1 {
-            font-size: 2.2rem;
-            font-weight: 300;
-            letter-spacing: 0.05em;
-            color: #fff;
+
+        /* --- Header --- */
+        header {
+            margin-bottom: 4rem;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            letter-spacing: -0.01em;
             margin-bottom: 0.3rem;
         }
-        .tagline {
-            font-size: 1.1rem;
-            color: #888;
-            margin-bottom: 2.5rem;
-            font-weight: 300;
+
+        header .location {
+            font-size: 0.9rem;
+            color: var(--muted);
+            font-style: italic;
+            margin-bottom: 1.8rem;
         }
-        .divider {
-            width: 60px;
-            height: 1px;
-            background: #333;
-            margin: 0 auto 2.5rem;
+
+        header .intro {
+            font-size: 1.05rem;
+            color: #333;
         }
-        p {
-            font-size: 1rem;
-            line-height: 1.7;
-            color: #999;
+
+        header .intro strong {
+            font-weight: 600;
+        }
+
+        /* --- Sections --- */
+        section {
+            margin-bottom: 3.5rem;
+        }
+
+        section h2 {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        /* --- What I Do cards --- */
+        .focus-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .focus-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.3rem;
+        }
+
+        .focus-card h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .focus-card p {
+            font-size: 0.88rem;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+
+        /* --- Journey --- */
+        .journey-item {
+            display: flex;
+            gap: 1.5rem;
             margin-bottom: 2rem;
         }
-        a {
-            color: #7eb8da;
-            text-decoration: none;
-            transition: color 0.2s;
+
+        .journey-year {
+            flex-shrink: 0;
+            width: 90px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--muted);
+            padding-top: 0.2rem;
         }
-        a:hover { color: #a8d4f0; }
-        .contact {
+
+        .journey-content h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+
+        .journey-content .role {
+            font-size: 0.88rem;
+            color: var(--accent);
+            font-style: italic;
+            margin-bottom: 0.3rem;
+        }
+
+        .journey-content p {
+            font-size: 0.92rem;
+            color: #555;
+        }
+
+        /* --- Clients --- */
+        .clients {
+            font-size: 0.92rem;
+            color: var(--muted);
+            line-height: 1.9;
+        }
+
+        .clients span {
+            white-space: nowrap;
+        }
+
+        /* --- Excited About --- */
+        .interests {
             font-size: 0.95rem;
-            color: #666;
+            color: #444;
+        }
+
+        .interests span {
+            display: inline-block;
+            background: var(--accent-light);
+            color: var(--accent);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 0.82rem;
+            font-weight: 500;
+            padding: 0.3rem 0.7rem;
+            border-radius: 20px;
+            margin: 0.2rem 0.3rem 0.2rem 0;
+        }
+
+        /* --- Connect --- */
+        .connect-links {
+            list-style: none;
+            display: flex;
+            gap: 1.8rem;
+            flex-wrap: wrap;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 0.92rem;
+        }
+
+        .connect-links a {
+            color: var(--text);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 2px;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .connect-links a:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        /* --- Footer --- */
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.82rem;
+            color: var(--muted);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 600px) {
+            .wrapper { padding: 2.5rem 1.2rem 4rem; }
+            header h1 { font-size: 1.5rem; }
+            .focus-grid { grid-template-columns: 1fr; }
+            .journey-item { flex-direction: column; gap: 0.3rem; }
+            .journey-year { width: auto; }
+            .connect-links { flex-direction: column; gap: 0.8rem; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Data Strategy Services</h1>
-        <div class="tagline">Gerald Stockinger</div>
-        <div class="divider"></div>
-        <p>Data strategy, analytics, and technology consulting for arts &amp; cultural organizations.</p>
-        <div class="contact">
-            <a href="mailto:gerald.stockinger@datastrategy.services">gerald.stockinger@datastrategy.services</a>
-        </div>
+    <div class="wrapper">
+        <header>
+            <h1>Gerald Stockinger</h1>
+            <div class="location">Vienna, Austria</div>
+            <div class="intro">
+                I build technology for the arts. As <strong>CTO and co-founder of easy-connect</strong>, I lead the development of mobile platforms that connect cultural institutions with their audiences — from the <strong>Metropolitan Opera</strong> in New York to the <strong>Salzburg Festival</strong>. Through <strong>Data Strategy Services</strong>, I help organizations turn data into decisions.
+            </div>
+        </header>
+
+        <section>
+            <h2>What I Focus On</h2>
+            <div class="focus-grid">
+                <div class="focus-card">
+                    <h3>Product & Technology</h3>
+                    <p>Leading product development for white-label mobile apps serving 100+ arts organizations worldwide.</p>
+                </div>
+                <div class="focus-card">
+                    <h3>Data & Analytics</h3>
+                    <p>Building data strategies and BI solutions that give cultural venues real insight into their audiences.</p>
+                </div>
+                <div class="focus-card">
+                    <h3>Integration</h3>
+                    <p>Connecting ticketing systems, CRM platforms, and marketing tools into seamless digital experiences.</p>
+                </div>
+                <div class="focus-card">
+                    <h3>Strategy</h3>
+                    <p>Bridging the gap between technology possibilities and business needs — from roadmap to execution.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>The Journey</h2>
+            <div class="journey-item">
+                <div class="journey-year">2014 –</div>
+                <div class="journey-content">
+                    <h3>easy-connect</h3>
+                    <div class="role">Co-Founder & CTO</div>
+                    <p>Started as Ticket Gretchen — a culture ticketing app for Vienna — and grew into a SaaS platform powering mobile experiences for opera houses, theaters, and concert halls across Europe and the US. Today we serve 100+ clients with a team building on Java, Angular, Python, and AWS.</p>
+                </div>
+            </div>
+            <div class="journey-item">
+                <div class="journey-year">2021 – 25</div>
+                <div class="journey-content">
+                    <h3>IDAGIO</h3>
+                    <div class="role">CTO, then Advisory Board</div>
+                    <p>Led the technology team at the classical music streaming platform. Transitioned to an advisory role in 2023.</p>
+                </div>
+            </div>
+            <div class="journey-item">
+                <div class="journey-year">2007 – 23</div>
+                <div class="journey-content">
+                    <h3>Kulturplanner</h3>
+                    <div class="role">BI Consultant → CTO → Advisory Board</div>
+                    <p>Started as a business intelligence consultant at Harrer & Partner, working on analytics projects across industries — universities, automotive, and increasingly the cultural sector. Became self-employed in 2013, took over as CTO in 2019, and moved to the advisory board in 2023. Kulturplanner is now a dedicated reporting and data analytics platform for cultural venues.</p>
+                </div>
+            </div>
+            <div class="journey-item">
+                <div class="journey-year">2022 –</div>
+                <div class="journey-content">
+                    <h3>Data Strategy Services</h3>
+                    <div class="role">Founder</div>
+                    <p>Independent consulting focused on data strategy, analytics, and business intelligence — primarily for arts and cultural organizations.</p>
+                </div>
+            </div>
+            <div class="journey-item">
+                <div class="journey-year">2003 – 07</div>
+                <div class="journey-content">
+                    <h3>TU Wien</h3>
+                    <div class="role">Software Engineering</div>
+                    <p>Moved to Vienna to study software engineering, building the foundation for everything that followed.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Clients & Partners</h2>
+            <p class="clients">
+                <span>Metropolitan Opera</span> · <span>Cleveland Orchestra</span> · <span>Salzburg Festival</span> · <span>Vienna State Opera</span> · <span>Bayerische Staatsoper</span> · <span>Burgtheater</span> · <span>Stiftung Oper in Berlin</span> · <span>Schaubühne Berlin</span> · <span>Opernhaus Zürich</span> · <span>Festspielhaus Baden-Baden</span> · <span>Roundabout Theatre NYC</span> · and many more
+            </p>
+        </section>
+
+        <section>
+            <h2>Excited About</h2>
+            <div class="interests">
+                <span>AI & LLMs</span>
+                <span>Data Engineering</span>
+                <span>Digital Transformation in Culture</span>
+                <span>Audience Development</span>
+                <span>Product-Led Growth</span>
+                <span>Open Data</span>
+                <span>Board Games</span>
+                <span>Fine Dining</span>
+                <span>Orange Wine</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Get in Touch</h2>
+            <ul class="connect-links">
+                <li><a href="mailto:gerald.stockinger@datastrategy.services">Email</a></li>
+                <li><a href="https://www.linkedin.com/in/geraldstockinger/" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="https://bsky.app/profile/geraldships-com.bsky.social" target="_blank" rel="noopener">Bluesky</a></li>
+                <li><a href="https://x.com/geraldships_com" target="_blank" rel="noopener">X</a></li>
+                <li><a href="https://github.com/gst1984" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
+        </section>
+
+        <footer>
+            &copy; 2026 Gerald Stockinger
+        </footer>
     </div>
 </body>
 </html>
