@@ -37,6 +37,22 @@
             margin-bottom: 4rem;
         }
 
+        .header-top {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.8rem;
+        }
+
+        .header-photo {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+            border: 2px solid var(--border);
+        }
+
         header h1 {
             font-size: 1.8rem;
             font-weight: 400;
@@ -48,7 +64,6 @@
             font-size: 0.9rem;
             color: var(--muted);
             font-style: italic;
-            margin-bottom: 1.8rem;
         }
 
         header .intro {
@@ -213,8 +228,13 @@
 <body>
     <div class="wrapper">
         <header>
-            <h1>Gerald Stockinger</h1>
-            <div class="location">Vienna, Austria</div>
+            <div class="header-top">
+                <img src="gerald.jpg" alt="Gerald Stockinger" class="header-photo">
+                <div>
+                    <h1>Gerald Stockinger</h1>
+                    <div class="location">Vienna, Austria</div>
+                </div>
+            </div>
             <div class="intro">
                 I build technology for the arts. As <strong>CTO and co-founder of easy-connect</strong>, I lead the development of mobile platforms that connect cultural institutions with their audiences — from the <strong>Metropolitan Opera</strong> in New York to the <strong>Salzburg Festival</strong>. Through <strong>Data Strategy Services</strong>, I help organizations turn data into decisions.
             </div>
